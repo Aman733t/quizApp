@@ -395,3 +395,34 @@ http://localhost:9005/api/getResultByUserid?userId=123
 ]
 ```
 
+### Test Descriptions
+
+- **Create Quiz Test:** Verifies that a quiz is successfully created with valid input.
+- **Submit Answer Tests:**
+  - Checks if the correct answer is marked as correct.
+  - Checks if an incorrect answer is marked as incorrect, and the correct option is returned.
+- **Get Results Test:** Ensures that quiz results for a specific user are fetched successfully.
+
+### Sample Test Output
+
+```
+ PASS  tests/quiz.test.js
+  Quiz API Tests
+    POST /api/createQuiz
+      ✓ should create a quiz successfully (56 ms)
+    POST /api/getQuizById
+      ✓ should get a quiz data (9 ms)
+    POST /api/submitQuizAns
+      ✓ should submit an answer successfully (10 ms)
+      ✓ should return incorrect for a wrong answer (13 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        0.848 s, estimated 1 s
+Ran all test suites.
+```
+
+---
+
+Feel free to reach out for any further clarifications or assistance!
