@@ -18,6 +18,10 @@ for (let route in routes.post) {
     app.post(route, filter.postMethod);
 }
 
+app.get('/',(req,res)=>{
+    res.send('welcome to quiz')
+})
+
 // Export the app instance for testing
 module.exports = app;
 
